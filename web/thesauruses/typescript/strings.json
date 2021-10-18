@@ -103,31 +103,32 @@
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "code": ""
+      "code": "let string: String = \"string\";\nlet anotherString: String = string; "
     },
     "destroy_string": {
       "name": "Destroy string",
-      "code": ""
+      "not-implemented": true
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": ""
+      "code": "string.length;"
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
-      "code": ""
+      "code": "2^53 - 1 elements"
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "code": ""
+      "not-implemented": true,
+      "comment": "You can set a string as empty with `string=\"\"`, but this will create a new reference, not clear the original."
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": ""
+      "code": "let isEmpty: Boolean = string.length == 0 ? true : false"
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": ""
+      "code": "const string: String = \"hello \"; \n const anotherString: String = \"world!\" \n const concatenatedString: String = string + anotherString"
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
