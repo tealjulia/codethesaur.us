@@ -94,16 +94,16 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": "let string: String = \"example string\""
+      "code": "const str: string = \"declare with const\"\nlet str2: string = \"declare with let\""
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
-      "code": "let multilineString: String = `this string\n    will be on two lines.` \n\n let multilineString: String = \"this string \\n will also be on two lines.\"",
-      "comment": "Multiline strings can be created either by using a template literal created with backticks (`````) like above, or by using a new line character (`/n`) like below."
+      "code": "const multilineString: string = `this string\n    will be on two lines.` \n\nconst multilineString: string = \"this string \\n will also be on two lines.\"",
+      "comment": "Multiline strings can be created either by using a template literal created with backticks (`` ` ``) like or by using a new line character (`\\n`)."
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "code": "let string: String = \"string\";\nlet anotherString: String = string; "
+      "code": "const str: string = \"string\";\nconst anotherString: string = str; "
     },
     "destroy_string": {
       "name": "Destroy string",
@@ -111,7 +111,7 @@
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": "string.length;"
+      "code": "str.length;"
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
@@ -120,107 +120,107 @@
     "clear_string": {
       "name": "Clear/empty string",
       "not-implemented": true,
-      "comment": "You can set a string as empty with `string=\"\"`, but this will create a new reference, not clear the original."
+      "comment": "You can set a string as empty with `str=\"\"`, but this will create a new reference, not clear the original."
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": "let isEmpty: Boolean = string.length == 0 ? true : false"
+      "code": "string.length == 0 ? true : false"
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": "const string: String = \"hello \"; \n const anotherString: String = \"world!\" \n const concatenatedString: String = string + anotherString"
+      "code": "str3: string = str1 + str2"
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
-      "code": ""
+      "code": "str4: string = str1 + str2 + str3"
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "code": ""
+      "not-implemented": true
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": ""
+      "not-implemented": true
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "code": ""
+      "not-implemented": true
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": ""
+      "not-implemented": true
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
-      "code": ""
+      "not-implemented": true
     },
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
-      "code": ""
+      "not-implemented": true
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
-      "code": ""
+      "not-implemented": true
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
-      "code": ""
+      "not-implemented": true
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
-      "code": ""
+      "code": "string.includes(substring)"
     },
     "find_start_index_of_substring": {
       "name": "Find index of where a substring starts",
-      "code": ""
+      "code": "string.indexOf(substring)"
     },
     "find_start_index_of_additional_substring": {
       "name": "Find index of an additional substring (or starting at another index)",
-      "code": ""
+      "code": "string.indexOf(substring, i)"
     },
     "find_start_index_of_substring_from_end": {
       "name": "Find substring index starting at end",
-      "code": ""
+      "not-implemented": true
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": ""
+      "not-implemented": true
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": ""
+      "code": "string.substring(start, count)"
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": ""
+      "code": "string.substring(string.length - count, count)"
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "code": ""
+      "not-implemented": true
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
-      "code": ""
+      "not-implemented": true
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
-      "code": ""
+      "code": "let string: string = \"string to transform\" \nstring = string.toUpperCase()\n\n//string = STRING TO TRANSFORM"
     },
     "convert_to_lowercase": {
       "name": "Convert string to all lowercase",
-      "code": ""
+      "code": "let string: string = \"STRING TO TRANSFORM\" \nstring.toLowerCase()\n\n//string = string to transform"
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "code": ""
+      "not-implemented": true
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
-      "code": ""
+      "code": "str = str[0].toUpperCase() + str.substring[1]"
     },
     "remove_whitespace": {
       "name": "Remove all whitespaces from string",
-      "code": ""
+      "code": "let string: string = \"        fix me!\"; string.trim();"
     },
     "replace_substring": {
       "name": "Replace a substring with another string",
@@ -228,23 +228,23 @@
     },
     "replace_all_substring": {
       "name": "Replace all substring matches with another string",
-      "code": ""
+      "code": "str.replace(substring, newString)"
     },
     "split_at_index": {
       "name": "Split string into a list of strings at a given index",
-      "code": ""
+      "not-implemented": true
     },
     "split_at_newlines": {
       "name": "Split string into a list of strings at every new line character",
-      "code": ""
+      "code": "str.split('\\n')"
     },
     "split_at_substring": {
       "name": "Split string by locating all substrings",
-      "code": ""
+      "code": "str.split(substring)"
     },
     "merge_lists_into_string": {
       "name": "Merge a list of strings into one string",
-      "code": ""
+      "code": "string.join(delimiter, stringList)"
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
@@ -272,27 +272,27 @@
     },
     "format_string_function": {
       "name": "Function to format a string",
-      "code": ""
+      "not-implemented": true
     },
     "parameter_format_in_order": {
       "name": "Parameter used in format function if they're used in order",
-      "code": ""
+      "not-implemented": true
     },
     "parameter_format_numerical": {
       "name": "Parameter used in format function if they're numerically numbered",
-      "code": ""
+      "not-implemented": true
     },
     "parameter_format_by_name": {
       "name": "Paramater used in format function if they're named variables",
-      "code": ""
+      "not-implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
-      "code": ""
+      "not-implemented": true
     },
     "format_as_decimal": {
       "name": "Format parameter as a decimal number",
-      "code": ""
+      "not-implemented": true
     },
     "format_as_fixed_decimal": {
       "name": "Format parameter as a fixed-point decimal number",
